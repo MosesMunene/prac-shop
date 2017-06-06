@@ -14,12 +14,7 @@
 
         <div id="category-table-panel" class="panel panel-default">
           <div class="panel-body">
-
-<<<<<<< HEAD
-            <table datatable class="table table-striped table-bordered table-hover">
-=======
             <table class="table table-striped table-bordered table-hover">
->>>>>>> 4df2f36f168df3e1a36c217e7beb07d7b9944f53
               <thead>
                 <tr>
                   <th>Category</th>
@@ -27,11 +22,7 @@
               </thead>
               <tbody>
                 <tr *ngFor="let category of categories" (click)="onclick(category)">
-<<<<<<< HEAD
-                  <td>{{category.name}}</td>
-=======
                   <td>{{category?.name}}</td>
->>>>>>> 4df2f36f168df3e1a36c217e7beb07d7b9944f53
                 </tr>
               </tbody>
             </table>
@@ -47,12 +38,8 @@
 
             <div class="form-group">
               <span style="float:right">
-<<<<<<< HEAD
-              <button class="btn btn-primary">Delete</button>
-=======
               <button class="btn btn-primary" (click)="deleteCategory()">Delete</button>
               <button class="btn btn-primary" type="reset">Reset</button>
->>>>>>> 4df2f36f168df3e1a36c217e7beb07d7b9944f53
               <button class="btn btn-primary" (click)="saveCategory()">Save</button>
               </span>
             </div>

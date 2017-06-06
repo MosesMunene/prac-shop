@@ -13,19 +13,10 @@ export class ProductService {
     }
 
     public getCategories(): Observable<Response> {
-<<<<<<< HEAD
         console.log("gettig categories");
         return this.http.get('/api/categories/');
     }
 
-    public createCategory(category: Category) {
-        console.log("creating category");
-        let headers: Headers = this.getAuthenticationHeader();
-        return this.http.post('/api/categories/', { category: category }, { headers: headers })
-=======
-        // console.log("gettig categories");
-        return this.http.get('/api/categories/');
-    }
 
     public createCategory(category: Category): Observable<Response> {
         const headers: Headers = this.getAuthenticationHeader();
@@ -40,7 +31,6 @@ export class ProductService {
             headers: headers,
         });
         return this.http.delete('/api/categories/', requestOptions);
->>>>>>> 4df2f36f168df3e1a36c217e7beb07d7b9944f53
     }
 
     public getAllProducts(): Observable<Response> {
