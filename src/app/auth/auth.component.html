@@ -1,0 +1,49 @@
+<div class="panel panel-default col-xs-4 col-xs-offset-4">
+  <div class="panel-heading">
+    <h2 class="panel-title">Authentication</h2>
+  </div>
+  <div class="panel-body">
+    <form>
+      <div class="form-group">
+        <label for="email">Email:</label>
+        <input name="email" type="email" class="form-control" placeholder="someone@domain.com" #email/>
+      </div>
+      <div class="form-group">
+        <label for="password">Password:</label>
+        <input name="password" type="password" class="form-control" #password />
+      </div>
+      <input type="button" class="btn btn-primary" value="submit" (click)="authenticate(email,password)"/>
+    </form>
+  </div>
+</div>
+
+<!--<div class="panel panel-default col-xs-4 col-xs-offset-4">
+  <div class="panel-heading">
+    <h2 class="panel-title">Account Creation</h2>
+  </div>
+  <div class="panel-body">
+    <form>
+      <div class="form-group">
+        <label for="email">Email:</label>
+        <input name="email" type="email" class="form-control" placeholder="someone@domain.com" #email/>
+      </div>
+       <div class="form-group">
+        <label for="firstName">First Name:</label>
+        <input name="firstName" type="text" class="form-control" placeholder="First Name" #firstName/>
+      </div>
+       <div class="form-group">
+        <label for="lastName">Last Name</label>
+        <input name="lastName" type="text" class="form-control" placeholder="Last Name" #lastName/>
+      </div>
+      <div class="form-group">
+        <label for="password">Password:</label>
+        <input name="password" type="password" class="form-control" #password />
+      </div>
+      <div class="form-group">
+        <label for="passwordRepeat">Password:</label>
+        <input name="passwordRepeat" type="password" class="form-control" #passwordRepeat />
+      </div>
+      <input type="button" class="btn btn-primary" value="submit" (click)="createUser(email,firstName,lastName,password,passwordRepeat)"/>
+    </form>
+  </div>
+</div>-->
