@@ -1,1 +1,9 @@
 /* You can add global styles to this file, and also import other style files */
+.wrapper{
+    margin-left: 250px;
+}
+
+
+div#category-table-panel div.dataTables_wrapper div.dataTables_filter input{
+    width:68%;
+}

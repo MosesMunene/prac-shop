@@ -1,0 +1,19 @@
+<div class="wrapper">
+  <div *ngIf="dataAvailable">
+    <a *ngFor="let product of products" [routerLink]="['/product/'+ product._id]" >
+      <div class="col-md-3">
+        <div class="panel panel-primary">
+          <div class="panel-heading">
+            <h6 class="heading-label">{{product.name}}</h6>
+          </div>
+          <div class="panel-body">
+            {{product.description}}
+          </div>
+          <div class="panel-footer">
+            {{product.price}}
+          </div>
+        </div>
+      </div>
+    </a>
+  </div>
+</div>

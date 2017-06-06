@@ -1,0 +1,38 @@
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-content">
+      <span class="sr-only">Toggle Naviigation</span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </button>
+      <a [routerLink]="['/']" class="navbar-brand">Prac Shop</a>
+    </div>
+    <div id="navbar-content" class="collapse navbar-collapse">
+      <ul class="nav navbar-nav">
+        <li><a [routerLink]="['/dashboard']" routerLinkActive="active">Dashboard</a></li>
+        <li><a [routerLink]="['/admin']" routerLinkActive="active">Admin</a></li>
+      </ul>
+      <ul class="navbar nav navbar-right">
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" role="button">Account <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a>Sign Up</a></li>
+            <li><a [routerLink]="['/login']">Sign In</a></li>
+            <li><a [routerLink]="['/login']" (click)="logout()">Sign Out</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+    <div class="navbar-deafult sidebar">
+      <div class="sidebar-nav navbar-collapse">
+        <ul class="nav in" id="side-menu">
+          <li *ngFor="let category of categories">
+            <a [routerLink]="[category.url]" routerLinkActive="active">{{category.name}}</a>
+          </li>
+        </ul>
+      </div>
+  </div>
+</nav>

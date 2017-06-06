@@ -1,0 +1,15 @@
+<div class="wrapper">
+  <div *ngIf="product">
+    <div class="col-md-6">
+    </div>
+
+    <div class="col-md-6">
+      <p>
+        {{product.name}}
+      </p>
+      <p>{{product.price}}</p>
+      <p>Additional VAT may apply; charged at checkout</p>
+      <button class="btn btn-primary">Add to Cart</button>
+    </div>
+  </div>
+</div>
