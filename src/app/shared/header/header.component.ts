@@ -15,7 +15,8 @@ export class HeaderComponent implements OnInit {
   ngOnInit() {
     this.productService.getCategories().map((response) => {
       response.json().data.map((item) => {
-       
+
+
         let category = new Category();
         category.name = item.name;
         category.url = "/products/" + item.name;
