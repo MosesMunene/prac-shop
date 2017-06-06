@@ -1,4 +1,54 @@
 <div class="tab-pane fade in" id="post-product-tab">
   <h4>Post New Product</h4>
-  
+  <div class="col-lg-12">
+    <div class="panel panel-default">
+      <div class="panel-body">
+        <form class="form-horizontal" [formGroup]="productForm" (ngSubmit)="onSubmit()">
+          <div class="form-group">
+            <label class="col-sm-2 control-label" for="productName">Product Name</label>
+            <div class="col-sm-10">
+              <input class="form-control" type="text" id="productName" formControlName="productName">
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="col-sm-2 control-label" for="productCategory">Product Category</label>
+            <div class="col-sm-10">
+              <select class="form-control" id="productCategory" formControlName="productCategory">
+              <option *ngFor="let category of categories">{{category.name}}</option>
+            </select>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="col-sm-2 control-label" for="productDescription">Product Description</label>
+            <div class="col-sm-10">
+              <input class="form-control" type="text" id="productDescription" formControlName="productDescription">
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="col-sm-2 control-label" for="productImage">Product Image</label>
+            <div class="col-sm-10">
+              <input type="file" id="productImage" formControlName="productImage">
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="col-sm-2 control-label" for="productQuantity">Quantity</label>
+            <div class="col-sm-10">
+              <input class="form-control" type="text" id="productQuantity" formControlName="productQuantity">
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="col-sm-2 control-label" for="producPrice">Price</label>
+            <div class="col-sm-10">
+              <input class="form-control" type="text" id="producPrice" formControlName="productPrice">
+            </div>
+          </div>
+          <div class="text-right">
+            <button type="submit" class="btn btn-default">Submit</button>
+            <button class="btn btn-default" type="reset">Reset</button>
+          </div>
+        </form>
+        <p>Form value: {{ productForm.value | json}}</p>
+      </div>
+    </div>
+  </div>
 </div>

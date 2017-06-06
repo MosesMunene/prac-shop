@@ -15,5 +15,8 @@ export class Product {
     _id: string;
     name: string;
     description: string;
+    category: string;
     price: string;
+    imageUrl: string;
+    image: File;
 }

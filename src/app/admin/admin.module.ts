@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { DataTablesModule } from 'angular-datatables';
 import { PostProductComponent } from './post-product/post-product.component';
 import { OrdersComponent } from './orders/orders.component';
@@ -11,7 +11,7 @@ import { CategoriesmanagementComponent } from './categoriesmanagement/categories
 
 @NgModule({
   imports: [
-    CommonModule, DataTablesModule, FormsModule
+    CommonModule, DataTablesModule, FormsModule, ReactiveFormsModule
   ],
   declarations: [PostProductComponent, OrdersComponent, MessagesComponent, CategoriesmanagementComponent]
 })
