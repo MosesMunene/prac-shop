@@ -13,23 +13,24 @@ import { AppComponent } from './app.component';
 import { HeaderModule } from './shared/header/header.module';
 import { AuthModule } from './auth/auth.module';
 import { AdminModule } from './admin/admin.module';
+import { MerchantModule } from './merchant/merchant.module';
 
 import { AuthService } from './services/auth.service';
 import { ProductService } from './services/product.service';
 import { NotificationService } from './services/notification.service';
-import { DashboardComponent } from './dashboard/dashboard.component';
 import { ProtectedPagesGuard } from './services/protectedPagesGuard';
 import { ProductComponent } from './product/product.component';
 import { AdminComponent } from './admin/admin.component';
 import { LandingComponent } from './landing/landing.component';
+import { ProductsComponent } from './products/products.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    DashboardComponent,
     ProductComponent,
     AdminComponent,
-    LandingComponent
+    LandingComponent,
+    ProductsComponent
   ],
   imports: [
     BrowserModule,
@@ -41,7 +42,8 @@ import { LandingComponent } from './landing/landing.component';
     RouterModule.forRoot(ROUTES),
     HeaderModule,
     AuthModule,
-    AdminModule
+    AdminModule,
+    MerchantModule
   ],
   providers: [AuthService, ProtectedPagesGuard, ProductService, ToasterService, NotificationService],
   bootstrap: [AppComponent]

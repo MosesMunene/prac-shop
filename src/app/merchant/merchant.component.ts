@@ -6,11 +6,11 @@ import { ActivatedRoute } from '@angular/router';
 import 'rxjs/Rx'
 
 @Component({
-  selector: 'app-dashboard',
-  templateUrl: './dashboard.component.html',
-  styleUrls: ['./dashboard.component.css']
+  selector: 'app-merchant',
+  templateUrl: './merchant.component.html',
+  styleUrls: ['./merchant.component.css']
 })
-export class DashboardComponent implements OnInit {
+export class MerchantComponent implements OnInit {
   private products: Product[];
   private dataAvailable: boolean = false;
 
