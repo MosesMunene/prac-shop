@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { Http, Response, RequestOptions, Headers } from '@angular/http';
 import { Observable } from 'rxjs';
 
-import { Category } from '../models';
+import { Category, Product } from '../models';
 
 
 @Injectable()
@@ -13,9 +13,9 @@ export class ProductService {
     }
 
     public getCategories(): Observable<Response> {
-        // console.log("gettig categories");
         return this.http.get('/api/categories/');
     }
+
 
     public createCategory(category: Category): Observable<Response> {
         const headers: Headers = this.getAuthenticationHeader();
@@ -36,9 +36,12 @@ export class ProductService {
         let token = localStorage.getItem('token');
         let headers = new Headers();
         headers.append("Authorization", token);
-        //console.log(token);
-
         return this.http.get('/api/products', { headers: headers });
+    }
+
+    public createProduct(product: Product): Observable<Response> {
+        let headers = this.getAuthenticationHeader();
+        return this.http.post('/api/products', { product: product }, { headers: headers });
     }
 
     public getProductsByCategory(category: string): Observable<Response> {

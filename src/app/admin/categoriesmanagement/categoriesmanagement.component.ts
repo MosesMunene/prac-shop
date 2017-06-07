@@ -82,5 +82,4 @@ export class CategoriesmanagementComponent implements OnInit, AfterViewInit {
       this.selectedCategory = new Category();
     }
   }
-
 }

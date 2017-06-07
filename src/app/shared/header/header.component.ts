@@ -16,6 +16,7 @@ export class HeaderComponent implements OnInit {
     this.productService.getCategories().map((response) => {
       response.json().data.map((item) => {
 
+
         let category = new Category();
         category.name = item.name;
         category.url = "/products/" + item.name;
@@ -23,7 +24,7 @@ export class HeaderComponent implements OnInit {
         return category;
       });
     }).subscribe((response) => {
-      // console.log(this.categories);
+      //console.log(this.categories);
     })
     // this.categories = [
     //   { name: "bags", url: "/products/bags" },
@@ -31,7 +32,6 @@ export class HeaderComponent implements OnInit {
     //   { name: "clothes", url: "/products/clothes" }
     // ]
   }
-
 
   public logout() {
     console.log("logging out...")
