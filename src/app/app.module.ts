@@ -8,21 +8,28 @@ import { DataTablesModule } from 'angular-datatables';
 import { ToasterModule, ToasterService } from 'angular2-toaster';
 import { ROUTES } from './app.routes';
 
-import { AppComponent } from './app.component';
-
+//Modules
 import { HeaderModule } from './shared/header/header.module';
 import { AuthModule } from './auth/auth.module';
 import { AdminModule } from './admin/admin.module';
 import { MerchantModule } from './merchant/merchant.module';
 
-import { AuthService } from './services/auth.service';
-import { ProductService } from './services/product.service';
-import { NotificationService } from './services/notification.service';
-import { ProtectedPagesGuard } from './services/protectedPagesGuard';
+//Components
+import { AppComponent } from './app.component';
 import { ProductComponent } from './product/product.component';
 import { AdminComponent } from './admin/admin.component';
 import { LandingComponent } from './landing/landing.component';
 import { ProductsComponent } from './products/products.component';
+
+//services
+import { AuthService } from './services/auth.service';
+import { ProductService } from './services/product.service';
+import { NotificationService } from './services/notification.service';
+
+//Guards
+import { ProtectedPagesGuard } from './services/protectedPagesGuard';
+import { MerchantPagesGuard } from './services/merchantPagesGuard';
+import { AdminPagesGuard } from './services/adminPagesGuard';
 
 @NgModule({
   declarations: [
@@ -45,7 +52,7 @@ import { ProductsComponent } from './products/products.component';
     AdminModule,
     MerchantModule
   ],
-  providers: [AuthService, ProtectedPagesGuard, ProductService, ToasterService, NotificationService],
+  providers: [AuthService, ProtectedPagesGuard, MerchantPagesGuard, AdminPagesGuard, ProductService, ToasterService, NotificationService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

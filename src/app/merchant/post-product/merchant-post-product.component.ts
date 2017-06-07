@@ -3,15 +3,14 @@ import { FormControl, FormGroup, FormBuilder, Validators } from '@angular/forms'
 import { ProductService } from '../../services/product.service';
 import { NotificationService } from '../../services/notification.service';
 import { Category, Product } from '../../models';
-//import map from 'rxjs/Rx';
 
 @Component({
-  selector: 'app-post-product',
-  templateUrl: './post-product.component.html',
-  styleUrls: ['./post-product.component.css']
+  selector: 'app-postproduct',
+  templateUrl: './merchant-post-product.component.html',
+  styleUrls: ['./merchant-post-product.component.css']
 })
-export class PostProductComponent implements OnInit {
-  productForm: FormGroup;
+export class MerchantPostProductComponent implements OnInit {
+productForm: FormGroup;
   categories: Category[] = [];
 
   constructor(private formBuilder: FormBuilder, private productService: ProductService, private notificationService: NotificationService) {
@@ -65,5 +64,4 @@ export class PostProductComponent implements OnInit {
       }
     })
   }
-
 }

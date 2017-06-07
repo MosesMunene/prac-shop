@@ -4,15 +4,15 @@ import { RouterModule } from '@angular/router';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { DataTablesModule } from 'angular-datatables';
 import { MerchantComponent } from './merchant.component';
-import { PostProductComponent } from './post-product/post-product.component';
-import { OrdersComponent } from './orders/orders.component';
-import { MessagesComponent } from './messages/messages.component';
-import { ProductsComponent } from './products/products.component';
+import { MerchantPostProductComponent } from './post-product/merchant-post-product.component';
+import { MerchantOrdersComponent } from './merchant-orders/merchant-orders.component';
+import { MerchantMessagesComponent } from './merchant-messages/merchant-messages.component';
+
 
 @NgModule({
   imports: [
-    CommonModule
+    CommonModule, RouterModule, FormsModule, ReactiveFormsModule, DataTablesModule
   ],
-  declarations: [MerchantComponent, PostProductComponent, OrdersComponent, MessagesComponent, ProductsComponent]
+  declarations: [MerchantComponent, MerchantPostProductComponent, MerchantOrdersComponent, MerchantMessagesComponent]
 })
 export class MerchantModule { }

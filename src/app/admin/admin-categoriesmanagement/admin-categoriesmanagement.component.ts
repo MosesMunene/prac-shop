@@ -7,10 +7,10 @@ import { Category } from '../../models';
 
 @Component({
   selector: 'app-categoriesmanagement',
-  templateUrl: './categoriesmanagement.component.html',
-  styleUrls: ['./categoriesmanagement.component.css']
+  templateUrl: './admin-categoriesmanagement.component.html',
+  styleUrls: ['./admin-categoriesmanagement.component.css']
 })
-export class CategoriesmanagementComponent implements OnInit, AfterViewInit {
+export class AdminCategoriesmanagementComponent implements OnInit, AfterViewInit {
   private dtOptions: DataTables.Settings = {};
   private dtTrigger: Subject<any> = new Subject();
   private categories: Category[] = [];

@@ -3,16 +3,16 @@ import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { DataTablesModule } from 'angular-datatables';
-import { PostProductComponent } from './post-product/post-product.component';
-import { OrdersComponent } from './orders/orders.component';
-import { MessagesComponent } from './messages/messages.component';
-import { CategoriesmanagementComponent } from './categoriesmanagement/categoriesmanagement.component';
+import { AdminPostProductComponent } from './admin-post-product/admin-post-product.component';
+import { AdminOrdersComponent } from './admin-orders/admin-orders.component';
+import { AdminMessagesComponent } from './admin-messages/admin-messages.component';
+import { AdminCategoriesmanagementComponent } from './admin-categoriesmanagement/admin-categoriesmanagement.component';
 
 
 @NgModule({
   imports: [
     CommonModule, DataTablesModule, FormsModule, ReactiveFormsModule
   ],
-  declarations: [PostProductComponent, OrdersComponent, MessagesComponent, CategoriesmanagementComponent]
+  declarations: [AdminPostProductComponent, AdminOrdersComponent, AdminMessagesComponent, AdminCategoriesmanagementComponent]
 })
 export class AdminModule { }

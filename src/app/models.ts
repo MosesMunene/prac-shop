@@ -3,6 +3,7 @@ export class User {
     lastName: string;
     email: string;
     token: string;
+    role: string;
 }
 
 export class Category {

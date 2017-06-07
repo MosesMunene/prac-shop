@@ -43,6 +43,7 @@ export class AuthComponent implements OnInit {
       if (responseData.success) {
         console.log("login success")
         localStorage.setItem("token", responseData.token);
+        localStorage.setItem("role", responseData.role);
         this.notificationService.notifySuccess("Login succesful");
       }
       else {
